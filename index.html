@@ -194,7 +194,18 @@ body:has(#__framer-editorbar.fullscreen) {
 html.__framer-editorbar-smooth-gutter-transition:has(#__framer-editorbar:not(.status_hidden)) {
     scrollbar-gutter: stable;
 }
-</style></head>
+</style>
+<style>
+  iframe[src*="edit.framer.com"],
+  iframe[src*="framer.com"],
+  a[href*="framer.com"],
+  div[style*="edit.framer.com"],
+  div[style*="position: fixed"][style*="right"][style*="bottom"] {
+    display: none !important;
+    pointer-events: none !important;
+  }
+</style>
+</head>
 <body class="framer-cursor-none">
     <script async="" src="./index_files/script" data-fid="844e70703a602916994c7a0970a421c5b7fd95839c82db562ea50c06be0244ca" data-no-nt=""></script>
     <!-- Start of bodyStart -->
