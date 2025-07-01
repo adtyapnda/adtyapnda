@@ -147,7 +147,19 @@ body:has(#__framer-editorbar.fullscreen) {
 html.__framer-editorbar-smooth-gutter-transition:has(#__framer-editorbar:not(.status_hidden)) {
     scrollbar-gutter: stable;
 }
-</style><style type="text/css" data-framer-css="true"></style><style type="text/css">
+</style>
+    <style>
+  div[style*="position:fixed"][style*="bottom"][style*="right"],
+  iframe[src*="framer.com"],
+  a[href*="framer.com"],
+  .framer-badge,
+  .netlify-badge {
+    display: none !important;
+    pointer-events: none !important;
+  }
+</style>
+
+    <style type="text/css" data-framer-css="true"></style><style type="text/css">
 #__framer-editorbar {
     --padding-right: 10px;
     color-scheme: light;
