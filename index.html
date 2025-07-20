@@ -180,6 +180,9 @@
             color: var(--text-primary);
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+        body, * {
+            cursor: none !important;
+        }
 
         .custom-cursor {
             position: fixed;
@@ -188,10 +191,11 @@
             background: var(--accent-color);
             border-radius: 50%;
             pointer-events: none;
-            z-index: 9999;
-            transition: all 0.1s ease;
+            z-index: 100000; /* must be higher than modals */
+            transition: transform 0.1s ease, background 0.1s ease;
             mix-blend-mode: difference;
         }
+
 
         .custom-cursor.hover {
             transform: scale(2);
@@ -412,6 +416,14 @@
         .theme-icon.light { background: #f8f9fa; border: 1px solid #ccc; }
         .theme-icon.retro { background: linear-gradient(45deg, #ffcc99, #e6b380); }
         .theme-icon.funky { background: linear-gradient(45deg, #00ffff, #ff00ff); }
+        .modal img,
+        .modal {
+            cursor: default !important;
+            pointer-events: auto
+        }
+        .modal {
+            pointer-events: auto;
+        }
 
         /* Hero Section */
         .hero {
@@ -421,7 +433,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            padding-top: 120px;
+            padding-top: 160px;
             padding-bottom: 80px; 
         }
 
@@ -526,7 +538,8 @@
             display: inline-block;
             padding: 15px 40px;
             background: transparent;
-            border: 1px solid var(--accent-color);
+            border: 1.5px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
             color: var(--accent-color);
             text-decoration: none;
             font-weight: 300;
@@ -1210,7 +1223,7 @@
                     <!-- Theme Toggle -->
                     <li class="theme-toggle">
                         <button class="theme-button" id="themeToggle">
-                            🌙 Dark
+                            Dark
                         </button>
                         <div class="theme-dropdown" id="themeDropdown">
                             <div class="theme-option" data-theme="dark">
@@ -1409,7 +1422,7 @@
                 <div class="card-content">
                     <div class="card-header">
                         <div>
-                            <h3 class="card-title">IEEE Code2Day Hackathon (Click to View)</h3>
+                            <h3 class="card-title">IEEE Code2Code Hackathon (Click to View)</h3>
                             <p class="card-company">Issued by IEEE · Jul 2025</p>
                         </div>
                     </div>
@@ -1634,10 +1647,10 @@
 
         // Theme configurations
         const themes = {
-            dark: { name: 'Dark', icon: '🌙' },
-            light: { name: 'Light', icon: '☀️' },
-            retro: { name: 'Retro', icon: '📻' },
-            funky: { name: 'Funky', icon: '🎨' }
+            dark: { name: 'Dark', icon: 'Very' },
+            light: { name: 'Light', icon: 'Super' },
+            retro: { name: 'Retro', icon: 'Goombas' },
+            funky: { name: 'Funky', icon: 'Picasso' }
         };
 
         // Load saved theme or default to dark
@@ -1919,9 +1932,5 @@
     allowfullscreen
   ></iframe>
 </div>
-
-
-
 </body>
 </html>
-
