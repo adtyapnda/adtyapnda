@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Panda - Portfolio</title>
+    <title>Aditya Panda</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,7 +111,7 @@
         
         /* Background image for entire hero section */
         .hero-section-bg {
-            background-image: url('https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg'); /* REPLACE THIS WITH YOUR IMAGE PATH */
+            background-image: url('https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -360,7 +360,7 @@
 </head>
 <body class="bg-matte-black text-matte-white font-space-grotesk">
     
-    <!-- Header Navigation - Navigation buttons removed -->
+    <!-- Header Navigation - UPDATED Connect Button -->
     <header class="floating-header fixed top-0 left-0 right-0 z-50 border-b border-matte-gray-dark/50">
         <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <!-- Logo with proper spacing to prevent cutoff -->
@@ -368,10 +368,10 @@
                 Aditya Panda
             </div>
             
-            <!-- CTA Button (only Resume button remains) -->
+            <!-- CTA Button - CHANGED to Connect -->
             <div class="flex items-center space-x-4">
-                <button class="btn-primary hidden md:block px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg font-space-grotesk">
-                    Resume
+                <button onclick="scrollToSection('contact')" class="btn-primary hidden md:block px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg font-space-grotesk">
+                    Connect
                 </button>
             </div>
         </nav>
@@ -405,8 +405,7 @@
             </p>
             
             <p class="hero-description text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed font-space-grotesk">
-                Passionate about bridging hardware and software at Bharati Vidyapeeth's College of Engineering, New Delhi (GGSIPU). 
-                Creating innovative solutions in embedded systems, IoT, and modern web technologies.
+                Engineering at the edge of speed, circuits, and intelligence.
             </p>
             
             <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
@@ -420,7 +419,7 @@
         </div>
     </section>
 
-    <!-- About Section with ClickSpark -->
+    <!-- About Section with ClickSpark - UPDATED with Image -->
     <section id="about" class="click-spark-container min-h-screen py-20 px-6" style="background-color: #121212 !important;">
         <canvas class="click-spark-canvas"></canvas>
         
@@ -431,37 +430,31 @@
                         About Me
                     </h2>
                     <p class="text-lg text-gray-300 leading-relaxed mb-6 font-space-grotesk">
-                       I’m Aditya Panda, an Electronics & Communication Engineering student at BVCOE, New Delhi (GGSIPU). I'm passionate about building systems that blur the line between hardware and intelligence — from autonomous robots to low-level embedded architectures.
-
+                       I'm Aditya Panda, an Electronics & Communication Engineering student at BVCOE, New Delhi (GGSIPU). I'm passionate about building systems that blur the line between hardware and intelligence — from autonomous robots to low-level embedded architectures.
                     </p>
                     <p class="text-lg text-gray-300 leading-relaxed mb-8 font-space-grotesk">
-                       My interests span robotics, neuromorphic computing, signal processing, and the high-performance engineering behind Formula 1. I’m fascinated by how elegant design, fast decision-making, and tightly integrated systems come together
+                       My interests span robotics, neuromorphic computing, signal processing, and the high-performance engineering behind Formula 1. I'm fascinated by how elegant design, fast decision-making, and tightly integrated systems come together
+                    </p>
                     <div class="flex flex-wrap gap-3">
                         <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium text-matte-white transition-all duration-300 cursor-default font-space-grotesk">
-                            Circuit Design
+                            Neural Networks
                         </span>
                         <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium text-matte-white transition-all duration-300 cursor-default font-space-grotesk">
-                            Signal Processing
+                            Machine Learning & AI
                         </span>
                         <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium text-matte-white transition-all duration-300 cursor-default font-space-grotesk">
-                            Embedded Systems
-                        </span>
-                        <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium text-matte-white transition-all duration-300 cursor-default font-space-grotesk">
-                            Web Development
-                        </span>
-                        <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium text-matte-white transition-all duration-300 cursor-default font-space-grotesk">
-                            IoT
-                        </span>
-                        <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium text-matte-white transition-all duration-300 cursor-default font-space-grotesk">
-                            Machine Learning
+                            Systems Engineering
                         </span>
                     </div>
                 </div>
                 <div class="relative">
                     <div class="aspect-square bg-matte-gray-dark/20 rounded-3xl p-8 backdrop-blur-sm border border-matte-gray-dark/30">
+                        <!-- UPDATED - Added actual image instead of placeholder text -->
                         <div class="w-full h-full bg-matte-gray-dark rounded-2xl flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-gray-400/10 to-gray-300/10"></div>
-                            <span class="text-gray-400 text-lg font-light relative z-10 font-space-grotesk">Aditya Panda</span>
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                                 alt="Aditya Panda Profile Picture" 
+                                 class="w-full h-full object-cover rounded-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-900/10"></div>
                         </div>
                     </div>
                 </div>
@@ -469,7 +462,7 @@
         </div>
     </section>
 
-    <!-- Projects Section with ClickSpark -->
+    <!-- Projects Section with ClickSpark - UPDATED with Links and Removed Icons -->
     <section id="projects" class="click-spark-container min-h-screen py-20 px-6" style="background-color: #121212 !important;">
         <canvas class="click-spark-canvas"></canvas>
         
@@ -480,112 +473,118 @@
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <!-- Project 1 -->
+                <!-- Project 1: Conway's Game of Life - UPDATED -->
                 <div class="project-card group rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-matte-gray-dark/50 hover:border-matte-gray-medium hover:-translate-y-2">
+                    <!-- UPDATED - Removed icon overlay -->
                     <div class="aspect-video bg-matte-gray-dark/50 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gray-400/10"></div>
-                        <svg class="w-12 h-12 text-gray-400 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                        </svg>
+                        <img src="https://media.discordapp.net/attachments/1385206938740199556/1402561730369818694/image.png?ex=68945ce6&is=68930b66&hm=3ce934566bdab19a0f178769619f0df73675f243899aefd9234dcbf6aed9b4d9&=&format=webp&quality=lossless&width=2694&height=1352" 
+                             alt="Conway's Game of Life - Cellular Automaton Pattern" 
+                             class="w-full h-full object-cover rounded-xl">
                     </div>
                     <h3 class="text-2xl font-semibold mb-4 group-hover:text-matte-white transition-colors duration-300 font-space-grotesk">
-                        IoT Home Automation System
+                        Conway's Game of Life
                     </h3>
                     <p class="text-gray-300 mb-6 leading-relaxed font-space-grotesk">
-                        Smart home automation system using ESP32, integrating sensors and actuators with a web-based control interface for real-time monitoring and control.
+                        Conway's Game of Life is a zero-player simulation where cells on a grid live, die, or multiply based on simple rules. Over time, these rules create surprisingly complex and lifelike patterns. It's a classic example of emergent behavior in systems.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="project-tech-tag font-space-grotesk">ESP32</span>
-                        <span class="project-tech-tag font-space-grotesk">Arduino</span>
-                        <span class="project-tech-tag font-space-grotesk">IoT</span>
+                        <span class="project-tech-tag font-space-grotesk">HTML</span>
+                        <span class="project-tech-tag font-space-grotesk">CSS</span>
+                        <span class="project-tech-tag font-space-grotesk">JavaScript</span>
                     </div>
-                    <button class="text-matte-white hover:text-gray-300 font-medium flex items-center gap-2 transition-colors duration-300 font-space-grotesk">
+                    <!-- UPDATED - Added proper href link -->
+                    <a href="https://conwayz.netlify.app/" target="_blank" class="text-matte-white hover:text-gray-300 font-medium flex items-center gap-2 transition-colors duration-300 font-space-grotesk">
                         View Project 
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                         </svg>
-                    </button>
+                    </a>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 2: ClarityAI - UPDATED -->
                 <div class="project-card group rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-matte-gray-dark/50 hover:border-matte-gray-medium hover:-translate-y-2">
+                    <!-- UPDATED - Removed icon overlay -->
                     <div class="aspect-video bg-matte-gray-dark/50 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gray-400/10"></div>
-                        <svg class="w-12 h-12 text-gray-400 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                        <img src="https://media.discordapp.net/attachments/1385206938740199556/1402561119104536626/image.png?ex=68945c55&is=68930ad5&hm=051b0fcfe7c2ad17281ae74f01b786e6f7bd4d844849381e24d9e1e8b01bd437&=&format=webp&quality=lossless&width=2686&height=1350" 
+                             alt="ClarityAI - AI Powered Speech Editor Interface" 
+                             class="w-full h-full object-cover rounded-xl">
                     </div>
                     <h3 class="text-2xl font-semibold mb-4 group-hover:text-matte-white transition-colors duration-300 font-space-grotesk">
-                        Digital Signal Processing Filter
+                       ClarityAI - An AI Powered Speech Editor.
                     </h3>
                     <p class="text-gray-300 mb-6 leading-relaxed font-space-grotesk">
-                        Implementation of advanced digital filters for audio signal processing with real-time analysis and visualization using MATLAB and embedded C.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="project-tech-tag font-space-grotesk">MATLAB</span>
-                        <span class="project-tech-tag font-space-grotesk">C/C++</span>
-                        <span class="project-tech-tag font-space-grotesk">DSP</span>
-                    </div>
-                    <button class="text-matte-white hover:text-gray-300 font-medium flex items-center gap-2 transition-colors duration-300 font-space-grotesk">
-                        View Project 
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card group rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-matte-gray-dark/50 hover:border-matte-gray-medium hover:-translate-y-2">
-                    <div class="aspect-video bg-matte-gray-dark/50 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gray-400/10"></div>
-                        <svg class="w-12 h-12 text-gray-400 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 group-hover:text-matte-white transition-colors duration-300 font-space-grotesk">
-                        Smart Energy Monitoring
-                    </h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed font-space-grotesk">
-                        Real-time energy consumption monitoring system with predictive analytics and mobile app integration for smart grid applications.
+                        ClarityAI is like Grammarly, but for voice.
+We made a SaaS that helps creators and educators express themselves clearly without overediting. We integrated the API and connecting the LLMs behind the scenes to handle transcription and intelligent rewriting. Auth is brought by Clerk.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="project-tech-tag font-space-grotesk">Python</span>
-                        <span class="project-tech-tag font-space-grotesk">TensorFlow</span>
-                        <span class="project-tech-tag font-space-grotesk">React Native</span>
+                        <span class="project-tech-tag font-space-grotesk">React</span>
+                        <span class="project-tech-tag font-space-grotesk">Tailwind CSS</span>
                     </div>
-                    <button class="text-matte-white hover:text-gray-300 font-medium flex items-center gap-2 transition-colors duration-300 font-space-grotesk">
+                    <!-- UPDATED - Added proper href link -->
+                    <a href="https://clarityai2.netlify.app/" target="_blank" class="text-matte-white hover:text-gray-300 font-medium flex items-center gap-2 transition-colors duration-300 font-space-grotesk">
                         View Project 
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                         </svg>
-                    </button>
+                    </a>
                 </div>
 
-                <!-- Project 4 -->
+                <!-- Project 3: WhoWrites - UPDATED -->
                 <div class="project-card group rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-matte-gray-dark/50 hover:border-matte-gray-medium hover:-translate-y-2">
+                    <!-- UPDATED - Removed icon overlay -->
                     <div class="aspect-video bg-matte-gray-dark/50 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gray-400/10"></div>
-                        <svg class="w-12 h-12 text-gray-400 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                        </svg>
+                        <img src="https://media.discordapp.net/attachments/1385206938740199556/1402560207778746380/image.png?ex=68945b7b&is=689309fb&hm=95f1a6113395afc76cdf7601901b0596fc7b9455f1a492f8c8a07038f3c222a2&=&format=webp&quality=lossless&width=2656&height=1352" 
+                             alt="WhoWrites - AI Persona Text Tool Interface" 
+                             class="w-full h-full object-cover rounded-xl">
                     </div>
                     <h3 class="text-2xl font-semibold mb-4 group-hover:text-matte-white transition-colors duration-300 font-space-grotesk">
-                        Wireless Communication Protocol
+                        WhoWrites - Build Your Persona with AI
                     </h3>
                     <p class="text-gray-300 mb-6 leading-relaxed font-space-grotesk">
-                        Custom wireless communication protocol implementation for IoT devices with error correction and adaptive data transmission rates.
+                       I built WhoWrites, which is another SaaS. WhoWrites is an AI based text exercise tool, allowing users to reword content via an assortment of a few quirky personas, such as a chirpy 8 year old or a naive character from Japan. On the backend, FastAPI is used, while TogetherAI's Mistral model does the rewriting.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="project-tech-tag font-space-grotesk">C++</span>
-                        <span class="project-tech-tag font-space-grotesk">RF Design</span>
-                        <span class="project-tech-tag font-space-grotesk">LoRa</span>
+                        <span class="project-tech-tag font-space-grotesk">Python</span>
+                        <span class="project-tech-tag font-space-grotesk">JavaScript</span>
+                        <span class="project-tech-tag font-space-grotesk">CSS</span>
                     </div>
-                    <button class="text-matte-white hover:text-gray-300 font-medium flex items-center gap-2 transition-colors duration-300 font-space-grotesk">
+                    <!-- UPDATED - Added proper href link -->
+                    <a href="https://whowrites.netlify.app/ " target="_blank" class="text-matte-white hover:text-gray-300 font-medium flex items-center gap-2 transition-colors duration-300 font-space-grotesk">
                         View Project 
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                         </svg>
-                    </button>
+                    </a>
+                </div>
+
+                <!-- Project 4: InteractJaipur - UPDATED -->
+                <div class="project-card group rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-matte-gray-dark/50 hover:border-matte-gray-medium hover:-translate-y-2">
+                    <!-- UPDATED - Removed icon overlay -->
+                    <div class="aspect-video bg-matte-gray-dark/50 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://media.discordapp.net/attachments/1385206938740199556/1385318497482965023/pexels-mrudula-thakur-256463-784879.jpg?ex=68944123&is=6892efa3&hm=42ef1f850b8fbbbac4098fbe07fe91aa7141458f763e6d4b2b0612d20a77b040&=&format=webp&width=2028&height=1352" 
+                             alt="InteractJaipur - Interactive Map of Jaipur Districts" 
+                             class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 group-hover:text-matte-white transition-colors duration-300 font-space-grotesk">
+                        InteractJaipur
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed font-space-grotesk">
+                        Built an interactive map that lets people hover over Jaipur's districts while revealing where to market your next chai startup. 
+                        I led the project, designed the UI/UX, coded in JS & CSS, estimated data, and developed SVG based visualizations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="project-tech-tag font-space-grotesk">JavaScript</span>
+                        <span class="project-tech-tag font-space-grotesk">CSS</span>
+                        <span class="project-tech-tag font-space-grotesk">HTML</span>
+                    </div>
+                    <!-- UPDATED - Added proper href link -->
+                    <a href="https://interactjaipur.netlify.app/" target="_blank" class="text-matte-white hover:text-gray-300 font-medium flex items-center gap-2 transition-colors duration-300 font-space-grotesk">
+                        View Project 
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -712,20 +711,19 @@
 
         // EXPANDED Photography Gallery Data
         const photographyItems = [
-  { id: "1", img: "https://picsum.photos/id/1015/600/900?grayscale", height: 400 },
-  { id: "2", img: "https://picsum.photos/id/1011/600/750?grayscale", height: 300 },
-  { id: "3", img: "https://picsum.photos/id/1020/600/800?grayscale", height: 500 },
-  { id: "4", img: "https://picsum.photos/id/1025/600/700?grayscale", height: 350 },
-  { id: "5", img: "https://picsum.photos/id/1040/600/850?grayscale", height: 450 },
-  { id: "6", img: "https://picsum.photos/id/1050/600/600?grayscale", height: 280 },
-  { id: "7", img: "https://picsum.photos/id/1055/600/750?grayscale", height: 380 },
-  { id: "8", img: "https://picsum.photos/id/1060/600/850?grayscale", height: 420 },
-  { id: "9", img: "https://picsum.photos/id/1065/600/600?grayscale", height: 320 },
-  { id: "10", img: "https://picsum.photos/id/1070/600/800?grayscale", height: 460 },
+  { id: "1", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564014059294791/image.png?ex=68945f07&is=68930d87&hm=1f0c44cbeec9671bffc5d16c0ead3f124703849b04d48b115ca288aebed71ab4&=&format=webp&quality=lossless&width=1570&height=1560", height: 400 },
+  { id: "2", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564076927713350/image.png?ex=68945f16&is=68930d96&hm=92f285bd78e35aabe71b632026c61da5b57ceb67d2882c9160f9a59c8db9b3df&=&format=webp&quality=lossless&width=1242&height=1560", height: 300 },
+  { id: "3", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564197623140393/image.png?ex=68945f33&is=68930db3&hm=9c09aa14544ad8fc62f08719b3b7b39ec64486d012e248271463abcfb03a1bc8&=&format=webp&quality=lossless&width=1572&height=1560", height: 500 },
+  { id: "4", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564240262430841/image.png?ex=68945f3d&is=68930dbd&hm=885584e0ba9ff49f0016a2b61eff7027d9e1b035455d451c09920c67742a4eb8&=&format=webp&quality=lossless&width=686&height=700", height: 350 },
+  { id: "5", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564315826884618/image.png?ex=68945f4f&is=68930dcf&hm=5305b787693cbaa3855d0c51906833d3892177c4bc3899135a88f95c8b1e721b&=&format=webp&quality=lossless&width=1572&height=1560", height: 450 },
+  { id: "6", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564397359955968/image.png?ex=68945f62&is=68930de2&hm=481e1d6d615627dc87695a934c239cab5f399199efb793f8fa8d12adb9aba945&=&format=webp&quality=lossless&width=1540&height=1560", height: 280 },
+  { id: "7", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564573600677938/image.png?ex=68945f8c&is=68930e0c&hm=8fd924785f4bf59b83dd8b7a0e7d21d6bf71a4516e443d67cd37cbc3b572e7c5&=&format=webp&quality=lossless&width=1534&height=1560", height: 380 },
+  { id: "8", img: "https://media.discordapp.net/attachments/1385206938740199556/1402565747624116244/image.png?ex=689460a4&is=68930f24&hm=01dcfce9f83c628ae495eee5c62fc93b749963f793e8d0849c60191f038c4f29&=&format=webp&quality=lossless&width=1528&height=1560", height: 420 },
+  { id: "9", img: "https://media.discordapp.net/attachments/1385206938740199556/1402566217000161311/image.png?ex=68946114&is=68930f94&hm=43da0788d384f250b50d96219cb03797075bdf51a3f1c075e80c70085250cfe3&=&format=webp&quality=lossless&width=654&height=700", height: 320 },
+  { id: "10", img: "https://media.discordapp.net/attachments/1385206938740199556/1402566263649079376/image.png?ex=6894611f&is=68930f9f&hm=4d340db4b7b96cd2381d5000ce348a73033bc699214da87f732425469cd72b8b&=&format=webp&quality=lossless&width=1516&height=1560", height: 460 },
   { id: "11", img: "https://picsum.photos/id/1075/600/700?grayscale", height: 340 },
   { id: "12", img: "https://picsum.photos/id/1080/600/900?grayscale", height: 520 }
-]
-
+];
 
         // FIXED Masonry Gallery Class
         class MasonryGallery {
@@ -1458,7 +1456,7 @@
 
         // Resume download function
         function downloadResume() {
-            alert('Resume download would start here. Please add your actual resume file.');
+            alert('Aditya Panda is yet to upload his resume. Please check Linkedin instead!');
         }
 
         // Dock hover effects
