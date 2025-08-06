@@ -79,14 +79,16 @@
             background-color: rgba(18, 18, 18, 0.8) !important;
         }
         
-        /* Prevent header logo cutoff */
+        /* FIXED: Prevent header logo cutoff with proper spacing */
         .header-logo {
-            padding: 1rem 0 1rem 1rem !important;
+            padding: 1.5rem 0 1.5rem 1.5rem !important;
             margin: 0 !important;
             width: auto !important;
-            min-width: 200px !important;
+            min-width: 220px !important;
             white-space: nowrap !important;
             overflow: visible !important;
+            line-height: 1.4 !important;
+            font-size: 1.25rem !important; /* Explicit font size */
         }
         
         .gradient-text {
@@ -96,11 +98,22 @@
             -webkit-text-fill-color: transparent;
         }
         
-        /* Remove fade effect from hero title */
+        /* FIXED: Hero title with proper line-height to prevent cutoff */
         .hero-title {
             opacity: 1 !important;
             animation: none !important;
             transition: none !important;
+            line-height: 1.1 !important;
+            padding: 0.5rem 0 !important;
+            margin-bottom: 2rem !important;
+        }
+        
+        /* FIXED: All main headings with proper spacing */
+        .main-heading {
+            line-height: 1.2 !important;
+            padding: 1rem 0 !important;
+            margin-bottom: 3rem !important;
+            overflow: visible !important;
         }
         
         .project-card {
@@ -139,6 +152,7 @@
         .hero-content {
             position: relative !important;
             z-index: 10 !important;
+            padding: 2rem 0 !important; /* Added padding */
         }
         
         /* Fix button visibility */
@@ -174,13 +188,18 @@
             background-color: rgba(42, 42, 42, 0.9) !important;
         }
         
-        /* Glassy dock container */
+        /* Enhanced dock container with slide animation */
         .dock-container {
             background: rgba(18, 18, 18, 0.4) !important;
             backdrop-filter: blur(20px) !important;
             -webkit-backdrop-filter: blur(20px) !important;
             border: 1px solid rgba(245, 245, 245, 0.1) !important;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        
+        #dock {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
         }
         
         /* ScrollVelocity styles - Positioned between description and social links */
@@ -237,17 +256,21 @@
             100% { transform: translateX(100vw); }
         }
         
-        /* Fixed DecryptedText styles */
+        /* FIXED: DecryptedText styles with proper spacing */
         .decrypted-text {
             display: block !important;
             text-align: center !important;
             width: 100% !important;
+            line-height: 1.2 !important;
+            padding: 1rem 0 !important;
+            overflow: visible !important;
         }
         
         .decrypted-text .char {
             display: inline-block;
             transition: color 0.3s ease, opacity 0.3s ease;
             font-family: 'Michroma', sans-serif !important;
+            line-height: 1.2 !important;
         }
         
         .decrypted-text .char.encrypted {
@@ -318,17 +341,21 @@
             filter: blur(0px);
         }
         
-        /* Photography heading animation styles */
+        /* FIXED: Photography heading animation styles with proper spacing */
         .photography-heading {
             display: block !important;
             text-align: center !important;
             width: 100% !important;
+            line-height: 1.2 !important;
+            padding: 1rem 0 !important;
+            overflow: visible !important;
         }
         
         .photography-heading .char {
             display: inline-block;
             transition: color 0.3s ease, opacity 0.3s ease;
             font-family: 'Michroma', sans-serif !important;
+            line-height: 1.2 !important;
         }
         
         .photography-heading .char.encrypted {
@@ -344,6 +371,12 @@
             opacity: 1;
         }
         
+        /* FIXED: Section containers with proper padding */
+        .section-container {
+            padding: 3rem 0 !important;
+            overflow: visible !important;
+        }
+        
         @media (max-width: 768px) {
             .scroll-velocity-text {
                 font-size: 1.8rem;
@@ -354,6 +387,22 @@
             }
             .scroll-velocity-line {
                 height: 40px;
+            }
+            
+            .hero-title {
+                line-height: 1.1 !important;
+                padding: 1rem 0 !important;
+            }
+            
+            .main-heading {
+                line-height: 1.2 !important;
+                padding: 0.75rem 0 !important;
+                margin-bottom: 2rem !important;
+            }
+            
+            .header-logo {
+                padding: 1rem 0 1rem 1rem !important;
+                font-size: 1.1rem !important;
             }
         }
     </style>
@@ -378,7 +427,7 @@
     </header>
 
     <!-- Hero Section with ClickSpark -->
-    <section id="hero" class="click-spark-container relative min-h-screen pt-20 flex items-center justify-center overflow-hidden">
+    <section id="hero" class="click-spark-container relative min-h-screen pt-20 flex items-center justify-center overflow-hidden section-container">
         <canvas class="click-spark-canvas"></canvas>
         
         <!-- Background image div -->
@@ -396,7 +445,7 @@
 
         <!-- Hero content with no fade -->
         <div class="hero-content text-center max-w-6xl mx-auto px-6">
-            <h1 class="hero-title text-5xl md:text-7xl lg:text-8xl font-light tracking-tight mb-6 gradient-text font-michroma">
+            <h1 class="hero-title text-5xl md:text-7xl lg:text-8xl font-light tracking-tight gradient-text font-michroma">
                 Aditya Panda
             </h1>
             
@@ -420,13 +469,13 @@
     </section>
 
     <!-- About Section with ClickSpark - UPDATED with Image -->
-    <section id="about" class="click-spark-container min-h-screen py-20 px-6" style="background-color: #121212 !important;">
+    <section id="about" class="click-spark-container min-h-screen py-20 px-6 section-container" style="background-color: #121212 !important;">
         <canvas class="click-spark-canvas"></canvas>
         
         <div class="about-content max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-light mb-8 gradient-text font-michroma">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-light gradient-text font-michroma main-heading">
                         About Me
                     </h2>
                     <p class="text-lg text-gray-300 leading-relaxed mb-6 font-space-grotesk">
@@ -463,12 +512,12 @@
     </section>
 
     <!-- Projects Section with ClickSpark - UPDATED with Links and Removed Icons -->
-    <section id="projects" class="click-spark-container min-h-screen py-20 px-6" style="background-color: #121212 !important;">
+    <section id="projects" class="click-spark-container min-h-screen py-20 px-6 section-container" style="background-color: #121212 !important;">
         <canvas class="click-spark-canvas"></canvas>
         
         <div class="projects-content max-w-7xl mx-auto">
             <!-- DecryptedText heading - starts encrypted -->
-            <h2 id="featured-projects-heading" class="text-4xl md:text-5xl lg:text-6xl font-light mb-16 decrypted-text font-michroma">
+            <h2 id="featured-projects-heading" class="text-4xl md:text-5xl lg:text-6xl font-light decrypted-text font-michroma main-heading">
                 Featured Projects
             </h2>
             
@@ -591,12 +640,12 @@ We made a SaaS that helps creators and educators express themselves clearly with
     </section>
 
     <!-- Photography Section - FIXED WITH PROPER ANIMATION AND MASONRY -->
-    <section id="photography" class="click-spark-container min-h-screen py-20 px-6" style="background-color: #121212 !important;">
+    <section id="photography" class="click-spark-container min-h-screen py-20 px-6 section-container" style="background-color: #121212 !important;">
         <canvas class="click-spark-canvas"></canvas>
         
         <div class="max-w-7xl mx-auto">
             <!-- Photography heading with DecryptedText animation -->
-            <h2 id="photography-heading" class="text-4xl md:text-5xl lg:text-6xl font-light mb-16 photography-heading font-michroma">
+            <h2 id="photography-heading" class="text-4xl md:text-5xl lg:text-6xl font-light photography-heading font-michroma main-heading">
                 Photography
             </h2>
             
@@ -608,11 +657,11 @@ We made a SaaS that helps creators and educators express themselves clearly with
     </section>
 
     <!-- Contact Section with ClickSpark -->
-    <section id="contact" class="click-spark-container min-h-screen py-20 px-6 flex flex-col items-center justify-center" style="background-color: #121212 !important;">
+    <section id="contact" class="click-spark-container min-h-screen py-20 px-6 flex flex-col items-center justify-center section-container" style="background-color: #121212 !important;">
         <canvas class="click-spark-canvas"></canvas>
         
         <div class="contact-content max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-light mb-8 gradient-text font-michroma">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-light gradient-text font-michroma main-heading">
                 Let's Connect
             </h2>
             
@@ -1471,13 +1520,14 @@ We made a SaaS that helps creators and educators express themselves clearly with
             });
         });
 
-        // Enhanced ScrollVelocity effect with scroll interaction
+        // Enhanced ScrollVelocity effect with scroll interaction AND dock slide functionality
         let scrollSpeed = 1;
         window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollHeight = document.body.scrollHeight - window.innerHeight;
             const scrollPercent = scrollTop / scrollHeight;
             
+            // Update scroll velocity
             scrollSpeed = 1 + (scrollPercent * 2);
             
             const line1 = document.querySelector('.scroll-velocity-text.line-1');
@@ -1486,6 +1536,26 @@ We made a SaaS that helps creators and educators express themselves clearly with
             if (line1 && line2) {
                 line1.style.animationDuration = `${45 / scrollSpeed}s`;
                 line2.style.animationDuration = `${50 / scrollSpeed}s`;
+            }
+            
+            // NEW: Dock slide down functionality when reaching end of page
+            const windowHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            const dock = document.getElementById('dock');
+            
+            if (!dock) return;
+            
+            // Check if near the bottom (within 100px of the end)
+            if (scrollTop + windowHeight >= docHeight - 100) {
+                // Slide dock down (hide with smooth transition)
+                dock.style.transform = 'translate(-50%, 100px)';
+                dock.style.opacity = '0.3';
+                dock.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            } else {
+                // Slide dock up (show)
+                dock.style.transform = 'translate(-50%, 0)';
+                dock.style.opacity = '1';
+                dock.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
             }
         });
     </script>
