@@ -68,9 +68,7 @@
             border: 1px solid rgba(245, 245, 245, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            /* Larger touch targets */
-            width: 3rem !important;
-            height: 3rem !important;
+            /* Touch-friendly sizes */
             min-width: 48px !important;
             min-height: 48px !important;
         }
@@ -423,54 +421,101 @@
             color: #f5f5f5;
             text-decoration: none;
             font-family: 'Space Grotesk', sans-serif;
+            padding: 1rem;
         }
 
         /* RESPONSIVE BREAKPOINTS */
         @media (max-width: 480px) {
+            /* Hero section mobile fixes */
             .hero-title {
-                font-size: 2.5rem !important; /* Much smaller on mobile */
+                font-size: 2.5rem !important;
                 line-height: 1.1 !important;
                 padding: 0.5rem 0 !important;
                 margin-bottom: 1rem !important;
             }
             
-            .main-heading {
-                font-size: 2rem !important; /* Smaller headings */
-                line-height: 1.2 !important;
-                padding: 0.5rem 0 !important;
-                margin-bottom: 1.5rem !important;
-            }
-            
-            .header-logo {
-                font-size: 1rem !important;
-                padding: 0.75rem 0 0.75rem 0.75rem !important;
-                min-width: 150px !important;
-            }
-            
-            /* Better mobile text sizes */
             .hero-subtitle {
                 font-size: 1.1rem !important;
+                margin-bottom: 1rem !important;
             }
             
             .hero-description {
                 font-size: 0.95rem !important;
                 line-height: 1.5 !important;
+                margin-bottom: 2rem !important;
             }
-
+            
+            /* Button stack mobile */
+            .hero-cta {
+                flex-direction: column !important;
+                gap: 1rem !important;
+                align-items: center !important;
+            }
+            
+            .hero-cta button {
+                width: 100% !important;
+                max-width: 280px !important;
+                padding: 1rem 2rem !important;
+            }
+            
+            /* Section spacing mobile */
+            .section-container {
+                padding: 2rem 0 !important;
+            }
+            
+            /* Typography mobile */
+            .main-heading {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+                padding: 0.5rem 0 !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Header mobile */
+            .header-logo {
+                font-size: 1rem !important;
+                padding: 1rem 0 1rem 1rem !important;
+                min-width: 150px !important;
+            }
+            
+            /* Dock mobile */
+            .dock-item {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+                min-width: 40px !important;
+                min-height: 40px !important;
+            }
+            
+            .dock-container {
+                gap: 0.5rem !important;
+                padding: 0.75rem 1rem !important;
+            }
+            
+            /* Project cards mobile */
+            .project-card {
+                padding: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Social links mobile */
+            .social-link {
+                padding: 1rem !important;
+                min-width: 48px !important;
+                min-height: 48px !important;
+            }
+            
+            /* ScrollVelocity mobile */
             .scroll-velocity-text {
                 font-size: 1.2rem !important;
             }
+            
             .scroll-velocity-container {
                 height: 80px !important;
                 margin: 1rem 0 !important;
             }
+            
             .scroll-velocity-line {
                 height: 30px !important;
-            }
-
-            /* Section containers */
-            .section-container {
-                padding: 1.5rem 0 !important;
             }
         }
 
@@ -486,7 +531,7 @@
 
         @media (max-width: 768px) {
             .mobile-menu-button {
-                display: block;
+                display: block !important;
             }
             
             .header-logo {
@@ -498,56 +543,24 @@
                 display: none !important;
             }
 
-            /* Section containers */
-            .section-container {
-                padding: 1.5rem 0 !important;
-            }
-            
-            /* About section mobile layout */
-            .about-content .grid {
+            /* Grid layouts mobile */
+            .about-content .grid,
+            .projects-content .grid {
                 grid-template-columns: 1fr !important;
                 gap: 2rem !important;
             }
             
-            /* Projects grid mobile */
-            .projects-content .grid {
-                grid-template-columns: 1fr !important;
-                gap: 1.5rem !important;
-            }
-            
-            .project-card {
-                padding: 1.5rem !important;
-            }
-            
-            /* Hero buttons mobile */
-            .hero-cta {
-                flex-direction: column !important;
-                gap: 1rem !important;
-                align-items: center !important;
-            }
-            
-            .hero-cta button {
-                width: 100% !important;
-                max-width: 280px !important;
-            }
-
-            .dock-item {
-                width: 2.5rem !important;
-                height: 2.5rem !important;
-            }
-            
-            .dock-container {
-                gap: 0.5rem !important;
-                padding: 0.75rem 1rem !important;
-            }
-            
-            /* Disable hover effects on touch devices */
-            .dock-item:hover {
+            /* Disable hover effects on mobile */
+            .dock-item:hover,
+            .project-card:hover,
+            .social-link:hover {
                 transform: none !important;
+                scale: 1 !important;
             }
             
-            .project-card:hover {
-                transform: none !important;
+            /* Remove parallax on mobile for better performance */
+            .hero-section-bg {
+                background-attachment: scroll !important;
             }
 
             .scroll-velocity-text {
@@ -578,11 +591,12 @@
             }
         }
 
-        /* Touch device detection */
+        /* Touch device specific fixes */
         @media (hover: none) and (pointer: coarse) {
             .dock-item:hover,
             .project-card:hover,
-            .social-link:hover {
+            .social-link:hover,
+            .masonry-item:hover {
                 transform: none !important;
                 scale: 1 !important;
             }
@@ -591,7 +605,7 @@
 </head>
 <body class="bg-matte-black text-matte-white font-space-grotesk">
     
-    <!-- Header Navigation - UPDATED Connect Button -->
+    <!-- Header Navigation - UPDATED with Mobile Menu -->
     <header class="floating-header fixed top-0 left-0 right-0 z-50 border-b border-matte-gray-dark/50">
         <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <!-- Logo with proper spacing to prevent cutoff -->
@@ -599,16 +613,16 @@
                 Aditya Panda
             </div>
             
-            <!-- Mobile hamburger menu -->
-            <button class="mobile-menu-button md:hidden p-2" aria-label="Toggle menu">
+            <!-- Mobile hamburger menu button -->
+            <button class="mobile-menu-button md:hidden p-2 text-white" aria-label="Toggle menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
             
-            <!-- CTA Button - CHANGED to Connect -->
-            <div class="flex items-center space-x-4">
-                <button onclick="scrollToSection('contact')" class="btn-primary hidden md:block px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg font-space-grotesk">
+            <!-- Desktop CTA Button -->
+            <div class="hidden md:flex items-center space-x-4">
+                <button onclick="scrollToSection('contact')" class="btn-primary px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg font-space-grotesk">
                     Connect
                 </button>
             </div>
@@ -956,19 +970,43 @@ We made a SaaS that helps creators and educators express themselves clearly with
             }
         }
 
-        // Mobile menu functionality
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+        // Mobile menu functionality - FIXED
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking on a link
+                mobileMenu.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'A') {
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+                
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+            }
         });
 
-        // Close mobile menu when clicking on a link
-        mobileMenu.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                mobileMenu.classList.remove('active');
-            }
+        // Touch-friendly interactions
+        document.addEventListener('touchstart', function() {}, true);
+
+        // Prevent zoom on double tap for buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('button, .dock-item, .social-link').forEach(element => {
+                element.addEventListener('touchend', function(e) {
+                    e.preventDefault();
+                    e.target.click();
+                });
+            });
         });
 
         // EXPANDED Photography Gallery Data
@@ -1587,20 +1625,6 @@ We made a SaaS that helps creators and educators express themselves clearly with
             observer.observe(element);
         }
 
-        // Debounced resize handler for performance
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                // Re-initialize components that need resize handling
-                if (window.innerWidth !== window.lastWidth) {
-                    window.lastWidth = window.innerWidth;
-                    // Reinitialize masonry gallery
-                    initPhotographyGallery();
-                }
-            }, 250);
-        });
-
         // Initialize everything when page loads
         window.addEventListener('load', () => {
             console.log('Page loaded, initializing all components...');
@@ -1652,12 +1676,40 @@ We made a SaaS that helps creators and educators express themselves clearly with
                         start: 'top 80%',
                         end: 'bottom 20%',
                         toggleActions: 'play none none reverse'
-                                    // Enhanced ScrollVelocity effect with scroll interaction AND dock slide functionality
-                   
-                                }
+                    }
                 }
             );
-                            // Enhanced ScrollVelocity effect with scroll interaction AND dock slide functionality
+
+            // Skill tags stagger animation
+            gsap.fromTo('.skill-tag',
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    stagger: 0.1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#skills',
+                        start: 'top 80%',
+                        end: 'bottom 20%',
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+                            // Parallax effect for floating elements
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.absolute');
+                
+                parallaxElements.forEach((element, index) => {
+                    const speed = 0.5 + (index * 0.1);
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+            });
+
+            // Enhanced ScrollVelocity effect with scroll interaction AND dock slide functionality
             let scrollSpeed = 1;
             window.addEventListener('scroll', () => {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -1695,196 +1747,167 @@ We made a SaaS that helps creators and educators express themselves clearly with
                     dock.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
                 }
             });
-        });
 
-        // Resume download function
-        function downloadResume() {
-            alert('Aditya Panda is yet to upload his resume. Please check LinkedIn instead!');
-        }
-
-        // Dock hover effects
-        const dockItems = document.querySelectorAll('.dock-item');
-        dockItems.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                gsap.to(item, { scale: 1.3, y: -8, duration: 0.3, ease: 'back.out(1.7)' });
-            });
-            
-            item.addEventListener('mouseleave', () => {
-                gsap.to(item, { scale: 1, y: 0, duration: 0.3, ease: 'back.out(1.7)' });
-            });
-        });
-
-        // Parallax effect for floating elements
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.absolute');
-            
-            parallaxElements.forEach((element, index) => {
-                const speed = 0.5 + (index * 0.1);
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`;
-            });
-        });
-
-        // Smooth scroll enhancement
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Performance optimization: Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections for animation triggers
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Add loading states
-        window.addEventListener('beforeunload', () => {
-            document.body.style.opacity = '0.5';
-        });
-
-        // Error handling for images
-        document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('error', function() {
-                console.warn('Failed to load image:', this.src);
-                this.style.display = 'none';
-            });
-        });
-
-        // Add touch support for mobile devices
-        let touchStartY = 0;
-        let touchEndY = 0;
-
-        document.addEventListener('touchstart', e => {
-            touchStartY = e.changedTouches[0].screenY;
-        });
-
-        document.addEventListener('touchend', e => {
-            touchEndY = e.changedTouches[0].screenY;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartY - touchEndY;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    // Swipe up - could trigger some action
-                    console.log('Swiped up');
-                } else {
-                    // Swipe down - could trigger some action
-                    console.log('Swiped down');
-                }
-            }
-        }
-
-        // Add keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            const sections = ['hero', 'about', 'projects', 'photography', 'contact'];
-            const currentSection = getCurrentSection();
-            const currentIndex = sections.indexOf(currentSection);
-
-            switch(e.key) {
-                case 'ArrowDown':
-                case ' ':
+            // Smooth scroll enhancement
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    if (currentIndex < sections.length - 1) {
-                        scrollToSection(sections[currentIndex + 1]);
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
                     }
-                    break;
-                case 'ArrowUp':
-                    e.preventDefault();
-                    if (currentIndex > 0) {
-                        scrollToSection(sections[currentIndex - 1]);
+                });
+            });
+
+            // Performance optimization: Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
                     }
-                    break;
-                case 'Home':
-                    e.preventDefault();
-                    scrollToSection('hero');
-                    break;
-                case 'End':
-                    e.preventDefault();
-                    scrollToSection('contact');
-                    break;
-            }
-        });
+                });
+            }, observerOptions);
 
-        function getCurrentSection() {
-            const sections = document.querySelectorAll('section');
-            let currentSection = 'hero';
-            
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 100 && rect.bottom >= 100) {
-                    currentSection = section.id;
+            // Observe all sections for animation triggers
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Add loading states
+            window.addEventListener('beforeunload', () => {
+                document.body.style.opacity = '0.5';
+            });
+
+            // Error handling for images
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', function() {
+                    console.warn('Failed to load image:', this.src);
+                    this.style.display = 'none';
+                });
+            });
+
+            // Add touch support for mobile devices
+            let touchStartY = 0;
+            let touchEndY = 0;
+
+            document.addEventListener('touchstart', e => {
+                touchStartY = e.changedTouches[0].screenY;
+            });
+
+            document.addEventListener('touchend', e => {
+                touchEndY = e.changedTouches[0].screenY;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartY - touchEndY;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // Swipe up - could trigger some action
+                        console.log('Swiped up');
+                    } else {
+                        // Swipe down - could trigger some action
+                        console.log('Swiped down');
+                    }
+                }
+            }
+
+            // Add keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                const sections = ['hero', 'about', 'projects', 'photography', 'contact'];
+                const currentSection = getCurrentSection();
+                const currentIndex = sections.indexOf(currentSection);
+
+                switch(e.key) {
+                    case 'ArrowDown':
+                    case ' ':
+                        e.preventDefault();
+                        if (currentIndex < sections.length - 1) {
+                            scrollToSection(sections[currentIndex + 1]);
+                        }
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        if (currentIndex > 0) {
+                            scrollToSection(sections[currentIndex - 1]);
+                        }
+                        break;
+                    case 'Home':
+                        e.preventDefault();
+                        scrollToSection('hero');
+                        break;
+                    case 'End':
+                        e.preventDefault();
+                        scrollToSection('contact');
+                        break;
                 }
             });
-            
-            return currentSection;
-        }
 
-        // Add focus management for accessibility
-        document.querySelectorAll('.dock-item').forEach(item => {
-            item.setAttribute('tabindex', '0');
-            item.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    item.click();
-                }
-            });
-        });
-
-        // Add ARIA labels for better accessibility
-        document.querySelectorAll('.social-link').forEach((link, index) => {
-            const platforms = ['GitHub', 'LinkedIn', 'Email'];
-            link.setAttribute('aria-label', `Visit ${platforms[index]} profile`);
-        });
-
-        // Performance monitoring
-        if ('performance' in window) {
-            window.addEventListener('load', () => {
-                setTimeout(() => {
-                    const perfData = performance.getEntriesByType('navigation')[0];
-                    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-                }, 0);
-            });
-        }
-
-        // Add preloader removal
-        setTimeout(() => {
-            const preloader = document.querySelector('.preloader');
-            if (preloader) {
-                preloader.style.opacity = '0';
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 300);
+            function getCurrentSection() {
+                const sections = document.querySelectorAll('section');
+                let currentSection = 'hero';
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        currentSection = section.id;
+                    }
+                });
+                
+                return currentSection;
             }
-        }, 1000);
 
-        // Initialize all components
-        console.log('Portfolio website fully loaded and optimized!');
+            // Add focus management for accessibility
+            document.querySelectorAll('.dock-item').forEach(item => {
+                item.setAttribute('tabindex', '0');
+                item.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        item.click();
+                    }
+                });
+            });
+
+            // Add ARIA labels for better accessibility
+            document.querySelectorAll('.social-link').forEach((link, index) => {
+                const platforms = ['GitHub', 'LinkedIn', 'Email'];
+                link.setAttribute('aria-label', `Visit ${platforms[index]} profile`);
+            });
+
+            // Performance monitoring
+            if ('performance' in window) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        const perfData = performance.getEntriesByType('navigation')[0];
+                        console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                    }, 0);
+                });
+            }
+
+            // Add preloader removal
+            setTimeout(() => {
+                const preloader = document.querySelector('.preloader');
+                if (preloader) {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 300);
+                }
+            }, 1000);
+
+            // Initialize all components
+            console.log('Portfolio website fully loaded and optimized!');
+        });
     </script>
 </body>
 </html>
