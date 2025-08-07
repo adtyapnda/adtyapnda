@@ -2,15 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Improved viewport meta tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Panda</title>
-    
-    <!-- Prevent flash of unstyled content -->
-    <style>
-        body { visibility: hidden; }
-        body.loaded { visibility: visible; }
-    </style>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,9 +61,6 @@
             border: 1px solid rgba(245, 245, 245, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            /* Touch-friendly sizes */
-            min-width: 48px !important;
-            min-height: 48px !important;
         }
         
         .dock-item:hover {
@@ -192,10 +182,6 @@
         .social-link, .skill-tag {
             background-color: rgba(30, 30, 30, 0.8) !important;
             border-color: rgba(42, 42, 42, 0.8) !important;
-            /* Touch-friendly sizes */
-            min-width: 48px !important;
-            min-height: 48px !important;
-            padding: 1rem !important;
         }
         
         .social-link:hover, .skill-tag:hover {
@@ -390,179 +376,8 @@
             padding: 3rem 0 !important;
             overflow: visible !important;
         }
-
-        /* Mobile hamburger menu */
-        .mobile-menu-button {
-            display: none;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(18, 18, 18, 0.95);
-            backdrop-filter: blur(20px);
-            z-index: 60;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .mobile-menu.active {
-            display: flex;
-        }
-
-        .mobile-menu a {
-            font-size: 1.5rem;
-            color: #f5f5f5;
-            text-decoration: none;
-            font-family: 'Space Grotesk', sans-serif;
-            padding: 1rem;
-        }
-
-        /* RESPONSIVE BREAKPOINTS */
-        @media (max-width: 480px) {
-            /* Hero section mobile fixes */
-            .hero-title {
-                font-size: 2.5rem !important;
-                line-height: 1.1 !important;
-                padding: 0.5rem 0 !important;
-                margin-bottom: 1rem !important;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.1rem !important;
-                margin-bottom: 1rem !important;
-            }
-            
-            .hero-description {
-                font-size: 0.95rem !important;
-                line-height: 1.5 !important;
-                margin-bottom: 2rem !important;
-            }
-            
-            /* Button stack mobile */
-            .hero-cta {
-                flex-direction: column !important;
-                gap: 1rem !important;
-                align-items: center !important;
-            }
-            
-            .hero-cta button {
-                width: 100% !important;
-                max-width: 280px !important;
-                padding: 1rem 2rem !important;
-            }
-            
-            /* Section spacing mobile */
-            .section-container {
-                padding: 2rem 0 !important;
-            }
-            
-            /* Typography mobile */
-            .main-heading {
-                font-size: 2rem !important;
-                line-height: 1.2 !important;
-                padding: 0.5rem 0 !important;
-                margin-bottom: 1.5rem !important;
-            }
-            
-            /* Header mobile */
-            .header-logo {
-                font-size: 1rem !important;
-                padding: 1rem 0 1rem 1rem !important;
-                min-width: 150px !important;
-            }
-            
-            /* Dock mobile */
-            .dock-item {
-                width: 2.5rem !important;
-                height: 2.5rem !important;
-                min-width: 40px !important;
-                min-height: 40px !important;
-            }
-            
-            .dock-container {
-                gap: 0.5rem !important;
-                padding: 0.75rem 1rem !important;
-            }
-            
-            /* Project cards mobile */
-            .project-card {
-                padding: 1.5rem !important;
-                margin-bottom: 1.5rem !important;
-            }
-            
-            /* Social links mobile */
-            .social-link {
-                padding: 1rem !important;
-                min-width: 48px !important;
-                min-height: 48px !important;
-            }
-            
-            /* ScrollVelocity mobile */
-            .scroll-velocity-text {
-                font-size: 1.2rem !important;
-            }
-            
-            .scroll-velocity-container {
-                height: 80px !important;
-                margin: 1rem 0 !important;
-            }
-            
-            .scroll-velocity-line {
-                height: 30px !important;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-title {
-                font-size: 3rem !important;
-            }
-            
-            .main-heading {
-                font-size: 2.5rem !important;
-            }
-        }
-
+        
         @media (max-width: 768px) {
-            .mobile-menu-button {
-                display: block !important;
-            }
-            
-            .header-logo {
-                font-size: 1rem !important;
-            }
-            
-            /* Hide desktop CTA on mobile */
-            .btn-primary.hidden.md\:block {
-                display: none !important;
-            }
-
-            /* Grid layouts mobile */
-            .about-content .grid,
-            .projects-content .grid {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-            
-            /* Disable hover effects on mobile */
-            .dock-item:hover,
-            .project-card:hover,
-            .social-link:hover {
-                transform: none !important;
-                scale: 1 !important;
-            }
-            
-            /* Remove parallax on mobile for better performance */
-            .hero-section-bg {
-                background-attachment: scroll !important;
-            }
-
             .scroll-velocity-text {
                 font-size: 1.8rem;
             }
@@ -590,22 +405,11 @@
                 font-size: 1.1rem !important;
             }
         }
-
-        /* Touch device specific fixes */
-        @media (hover: none) and (pointer: coarse) {
-            .dock-item:hover,
-            .project-card:hover,
-            .social-link:hover,
-            .masonry-item:hover {
-                transform: none !important;
-                scale: 1 !important;
-            }
-        }
     </style>
 </head>
 <body class="bg-matte-black text-matte-white font-space-grotesk">
     
-    <!-- Header Navigation - UPDATED with Mobile Menu -->
+    <!-- Header Navigation - UPDATED Connect Button -->
     <header class="floating-header fixed top-0 left-0 right-0 z-50 border-b border-matte-gray-dark/50">
         <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <!-- Logo with proper spacing to prevent cutoff -->
@@ -613,30 +417,14 @@
                 Aditya Panda
             </div>
             
-            <!-- Mobile hamburger menu button -->
-            <button class="mobile-menu-button md:hidden p-2 text-white" aria-label="Toggle menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            
-            <!-- Desktop CTA Button -->
-            <div class="hidden md:flex items-center space-x-4">
-                <button onclick="scrollToSection('contact')" class="btn-primary px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg font-space-grotesk">
+            <!-- CTA Button - CHANGED to Connect -->
+            <div class="flex items-center space-x-4">
+                <button onclick="scrollToSection('contact')" class="btn-primary hidden md:block px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg font-space-grotesk">
                     Connect
                 </button>
             </div>
         </nav>
     </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="#hero" onclick="scrollToSection('hero')">Home</a>
-        <a href="#about" onclick="scrollToSection('about')">About</a>
-        <a href="#projects" onclick="scrollToSection('projects')">Projects</a>
-        <a href="#photography" onclick="scrollToSection('photography')">Photography</a>
-        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
-    </div>
 
     <!-- Hero Section with ClickSpark -->
     <section id="hero" class="click-spark-container relative min-h-screen pt-20 flex items-center justify-center overflow-hidden section-container">
@@ -904,7 +692,7 @@ We made a SaaS that helps creators and educators express themselves clearly with
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
-                <a href="https://linkedin.com/in/adtyapnda" target="_blank" class="social-link p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 border border-matte-gray-dark/50 hover:border-matte-gray-medium group backdrop-blur-sm">
+                <a href="https://linkedin.com/adtyapnda" target="_blank" class="social-link p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 border border-matte-gray-dark/50 hover:border-matte-gray-medium group backdrop-blur-sm">
                     <svg class="w-8 h-8 text-gray-300 group-hover:text-matte-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                     </svg>
@@ -970,62 +758,23 @@ We made a SaaS that helps creators and educators express themselves clearly with
             }
         }
 
-        // Mobile menu functionality - FIXED
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.querySelector('.mobile-menu-button');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('active');
-                });
-                
-                // Close mobile menu when clicking on a link
-                mobileMenu.addEventListener('click', (e) => {
-                    if (e.target.tagName === 'A') {
-                        mobileMenu.classList.remove('active');
-                    }
-                });
-                
-                // Close mobile menu when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-                        mobileMenu.classList.remove('active');
-                    }
-                });
-            }
-        });
-
-        // Touch-friendly interactions
-        document.addEventListener('touchstart', function() {}, true);
-
-        // Prevent zoom on double tap for buttons
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('button, .dock-item, .social-link').forEach(element => {
-                element.addEventListener('touchend', function(e) {
-                    e.preventDefault();
-                    e.target.click();
-                });
-            });
-        });
-
         // EXPANDED Photography Gallery Data
         const photographyItems = [
-          { id: "1", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564014059294791/image.png?ex=68945f07&is=68930d87&hm=1f0c44cbeec9671bffc5d16c0ead3f124703849b04d48b115ca288aebed71ab4&=&format=webp&quality=lossless&width=1570&height=1560", height: 400 },
-          { id: "2", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564076927713350/image.png?ex=68945f16&is=68930d96&hm=92f285bd78e35aabe71b632026c61da5b57ceb67d2882c9160f9a59c8db9b3df&=&format=webp&quality=lossless&width=1242&height=1560", height: 300 },
-          { id: "3", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564197623140393/image.png?ex=68945f33&is=68930db3&hm=9c09aa14544ad8fc62f08719b3b7b39ec64486d012e248271463abcfb03a1bc8&=&format=webp&quality=lossless&width=1572&height=1560", height: 500 },
-          { id: "4", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564240262430841/image.png?ex=68945f3d&is=68930dbd&hm=885584e0ba9ff49f0016a2b61eff7027d9e1b035455d451c09920c67742a4eb8&=&format=webp&quality=lossless&width=686&height=700", height: 350 },
-          { id: "5", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564315826884618/image.png?ex=68945f4f&is=68930dcf&hm=5305b787693cbaa3855d0c51906833d3892177c4bc3899135a88f95c8b1e721b&=&format=webp&quality=lossless&width=1572&height=1560", height: 450 },
-          { id: "6", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564397359955968/image.png?ex=68945f62&is=68930de2&hm=481e1d6d615627dc87695a934c239cab5f399199efb793f8fa8d12adb9aba945&=&format=webp&quality=lossless&width=1540&height=1560", height: 280 },
-          { id: "7", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564573600677938/image.png?ex=68945f8c&is=68930e0c&hm=8fd924785f4bf59b83dd8b7a0e7d21d6bf71a4516e443d67cd37cbc3b572e7c5&=&format=webp&quality=lossless&width=1534&height=1560", height: 380 },
-          { id: "8", img: "https://media.discordapp.net/attachments/1385206938740199556/1402565747624116244/image.png?ex=689460a4&is=68930f24&hm=01dcfce9f83c628ae495eee5c62fc93b749963f793e8d0849c60191f038c4f29&=&format=webp&quality=lossless&width=1528&height=1560", height: 420 },
-          { id: "9", img: "https://media.discordapp.net/attachments/1385206938740199556/1402566217000161311/image.png?ex=68946114&is=68930f94&hm=43da0788d384f250b50d96219cb03797075bdf51a3f1c075e80c70085250cfe3&=&format=webp&quality=lossless&width=654&height=700", height: 320 },
-          { id: "10", img: "https://media.discordapp.net/attachments/1385206938740199556/1402566263649079376/image.png?ex=6894611f&is=68930f9f&hm=4d340db4b7b96cd2381d5000ce348a73033bc699214da87f732425469cd72b8b&=&format=webp&quality=lossless&width=1516&height=1560", height: 460 },
-          { id: "11", img: "https://picsum.photos/id/1075/600/700?grayscale", height: 340 },
-          { id: "12", img: "https://picsum.photos/id/1080/600/900?grayscale", height: 520 }
-        ];
+  { id: "1", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564014059294791/image.png?ex=68945f07&is=68930d87&hm=1f0c44cbeec9671bffc5d16c0ead3f124703849b04d48b115ca288aebed71ab4&=&format=webp&quality=lossless&width=1570&height=1560", height: 400 },
+  { id: "2", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564076927713350/image.png?ex=68945f16&is=68930d96&hm=92f285bd78e35aabe71b632026c61da5b57ceb67d2882c9160f9a59c8db9b3df&=&format=webp&quality=lossless&width=1242&height=1560", height: 300 },
+  { id: "3", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564197623140393/image.png?ex=68945f33&is=68930db3&hm=9c09aa14544ad8fc62f08719b3b7b39ec64486d012e248271463abcfb03a1bc8&=&format=webp&quality=lossless&width=1572&height=1560", height: 500 },
+  { id: "4", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564240262430841/image.png?ex=68945f3d&is=68930dbd&hm=885584e0ba9ff49f0016a2b61eff7027d9e1b035455d451c09920c67742a4eb8&=&format=webp&quality=lossless&width=686&height=700", height: 350 },
+  { id: "5", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564315826884618/image.png?ex=68945f4f&is=68930dcf&hm=5305b787693cbaa3855d0c51906833d3892177c4bc3899135a88f95c8b1e721b&=&format=webp&quality=lossless&width=1572&height=1560", height: 450 },
+  { id: "6", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564397359955968/image.png?ex=68945f62&is=68930de2&hm=481e1d6d615627dc87695a934c239cab5f399199efb793f8fa8d12adb9aba945&=&format=webp&quality=lossless&width=1540&height=1560", height: 280 },
+  { id: "7", img: "https://media.discordapp.net/attachments/1385206938740199556/1402564573600677938/image.png?ex=68945f8c&is=68930e0c&hm=8fd924785f4bf59b83dd8b7a0e7d21d6bf71a4516e443d67cd37cbc3b572e7c5&=&format=webp&quality=lossless&width=1534&height=1560", height: 380 },
+  { id: "8", img: "https://media.discordapp.net/attachments/1385206938740199556/1402565747624116244/image.png?ex=689460a4&is=68930f24&hm=01dcfce9f83c628ae495eee5c62fc93b749963f793e8d0849c60191f038c4f29&=&format=webp&quality=lossless&width=1528&height=1560", height: 420 },
+  { id: "9", img: "https://media.discordapp.net/attachments/1385206938740199556/1402566217000161311/image.png?ex=68946114&is=68930f94&hm=43da0788d384f250b50d96219cb03797075bdf51a3f1c075e80c70085250cfe3&=&format=webp&quality=lossless&width=654&height=700", height: 320 },
+  { id: "10", img: "https://media.discordapp.net/attachments/1385206938740199556/1402566263649079376/image.png?ex=6894611f&is=68930f9f&hm=4d340db4b7b96cd2381d5000ce348a73033bc699214da87f732425469cd72b8b&=&format=webp&quality=lossless&width=1516&height=1560", height: 460 },
+  { id: "11", img: "https://picsum.photos/id/1075/600/700?grayscale", height: 340 },
+  { id: "12", img: "https://picsum.photos/id/1080/600/900?grayscale", height: 520 }
+];
 
-        // FIXED Masonry Gallery Class with mobile optimization
+        // FIXED Masonry Gallery Class
         class MasonryGallery {
             constructor(container, items, options = {}) {
                 this.container = container;
@@ -1053,9 +802,9 @@ We made a SaaS that helps creators and educators express themselves clearly with
                 const width = window.innerWidth;
                 if (width >= 1500) return 5;
                 if (width >= 1200) return 4;
-                if (width >= 900) return 3;
-                if (width >= 600) return 2;
-                return 1; // Single column for very small screens
+                if (width >= 800) return 3;
+                if (width >= 500) return 2;
+                return 1;
             }
             
             async init() {
@@ -1104,9 +853,8 @@ We made a SaaS that helps creators and educators express themselves clearly with
                 }
                 
                 const columns = this.getColumns();
-                const isMobile = window.innerWidth < 768;
-                const gap = isMobile ? 10 : 15; // Smaller gap on mobile
                 const columnWidth = containerWidth / columns;
+                const gap = 15;
                 const colHeights = new Array(columns).fill(0);
                 
                 console.log(`Calculating grid: ${columns} columns, ${columnWidth}px each`);
@@ -1177,8 +925,8 @@ We made a SaaS that helps creators and educators express themselves clearly with
                         window.open(item.url, '_blank', 'noopener');
                     });
                     
-                    // Add hover effects only on non-touch devices
-                    if (this.options.scaleOnHover && !('ontouchstart' in window)) {
+                    // Add hover effects
+                    if (this.options.scaleOnHover) {
                         element.addEventListener('mouseenter', () => {
                             gsap.to(element, {
                                 scale: this.options.hoverScale,
@@ -1629,9 +1377,6 @@ We made a SaaS that helps creators and educators express themselves clearly with
         window.addEventListener('load', () => {
             console.log('Page loaded, initializing all components...');
             
-            // Add loading class removal
-            document.body.classList.add('loaded');
-            
             // Initialize ClickSpark effects
             initClickSparks();
             
@@ -1681,232 +1426,137 @@ We made a SaaS that helps creators and educators express themselves clearly with
             );
 
             // Skill tags stagger animation
-            gsap.fromTo('.skill-tag',
+            gsap.fromTo('.skill-tag', 
                 { opacity: 0, y: 20 },
                 {
                     opacity: 1,
                     y: 0,
                     duration: 0.5,
                     stagger: 0.1,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: '.skill-tag',
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+
+            // Projects section reveal
+            gsap.fromTo('.project-card', 
+                { opacity: 0, y: 80, scale: 0.95 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 0.8,
+                    stagger: 0.2,
                     ease: 'power3.out',
                     scrollTrigger: {
-                        trigger: '#skills',
+                        trigger: '#projects',
+                        start: 'top 75%',
+                        end: 'bottom 25%',
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+
+            // Contact section reveal
+            gsap.fromTo('.contact-content',
+                { opacity: 0, y: 80 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#contact',
                         start: 'top 80%',
                         end: 'bottom 20%',
                         toggleActions: 'play none none reverse'
                     }
                 }
             );
-                            // Parallax effect for floating elements
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const parallaxElements = document.querySelectorAll('.absolute');
-                
-                parallaxElements.forEach((element, index) => {
-                    const speed = 0.5 + (index * 0.1);
-                    const yPos = -(scrolled * speed);
-                    element.style.transform = `translateY(${yPos}px)`;
-                });
-            });
 
-            // Enhanced ScrollVelocity effect with scroll interaction AND dock slide functionality
-            let scrollSpeed = 1;
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                const scrollHeight = document.body.scrollHeight - window.innerHeight;
-                const scrollPercent = scrollTop / scrollHeight;
-                
-                // Update scroll velocity
-                scrollSpeed = 1 + (scrollPercent * 2);
-                
-                const line1 = document.querySelector('.scroll-velocity-text.line-1');
-                const line2 = document.querySelector('.scroll-velocity-text.line-2');
-                
-                if (line1 && line2) {
-                    line1.style.animationDuration = `${45 / scrollSpeed}s`;
-                    line2.style.animationDuration = `${50 / scrollSpeed}s`;
-                }
-                
-                // NEW: Dock slide down functionality when reaching end of page
-                const windowHeight = window.innerHeight;
-                const docHeight = document.documentElement.scrollHeight;
-                const dock = document.getElementById('dock');
-                
-                if (!dock) return;
-                
-                // Check if near the bottom (within 100px of the end)
-                if (scrollTop + windowHeight >= docHeight - 100) {
-                    // Slide dock down (hide with smooth transition)
-                    dock.style.transform = 'translate(-50%, 100px)';
-                    dock.style.opacity = '0.3';
-                    dock.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-                } else {
-                    // Slide dock up (show)
-                    dock.style.transform = 'translate(-50%, 0)';
-                    dock.style.opacity = '1';
-                    dock.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-                }
-            });
-
-            // Smooth scroll enhancement
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Performance optimization: Intersection Observer for animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all sections for animation triggers
-            document.querySelectorAll('section').forEach(section => {
-                observer.observe(section);
-            });
-
-            // Add loading states
-            window.addEventListener('beforeunload', () => {
-                document.body.style.opacity = '0.5';
-            });
-
-            // Error handling for images
-            document.querySelectorAll('img').forEach(img => {
-                img.addEventListener('error', function() {
-                    console.warn('Failed to load image:', this.src);
-                    this.style.display = 'none';
-                });
-            });
-
-            // Add touch support for mobile devices
-            let touchStartY = 0;
-            let touchEndY = 0;
-
-            document.addEventListener('touchstart', e => {
-                touchStartY = e.changedTouches[0].screenY;
-            });
-
-            document.addEventListener('touchend', e => {
-                touchEndY = e.changedTouches[0].screenY;
-                handleSwipe();
-            });
-
-            function handleSwipe() {
-                const swipeThreshold = 50;
-                const diff = touchStartY - touchEndY;
-                
-                if (Math.abs(diff) > swipeThreshold) {
-                    if (diff > 0) {
-                        // Swipe up - could trigger some action
-                        console.log('Swiped up');
-                    } else {
-                        // Swipe down - could trigger some action
-                        console.log('Swiped down');
+            // Social links stagger animation
+            gsap.fromTo('.social-link',
+                { opacity: 0, scale: 0.8, y: 30 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                    duration: 0.6,
+                    stagger: 0.1,
+                    ease: 'back.out(1.7)',
+                    scrollTrigger: {
+                        trigger: '.social-link',
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
                     }
                 }
+            );
+
+            // Dock entrance animation
+            gsap.fromTo('#dock',
+                { opacity: 0, y: 100 },
+                { opacity: 1, y: 0, duration: 1, ease: 'back.out(1.7)', delay: 0 }
+            );
+        });
+
+        // Resume download function
+        function downloadResume() {
+            alert('Aditya Panda is yet to upload his resume. Please check Linkedin instead!');
+        }
+
+        // Dock hover effects
+        const dockItems = document.querySelectorAll('.dock-item');
+        dockItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                gsap.to(item, { scale: 1.3, y: -8, duration: 0.3, ease: 'back.out(1.7)' });
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                gsap.to(item, { scale: 1, y: 0, duration: 0.3, ease: 'back.out(1.7)' });
+            });
+        });
+
+        // Enhanced ScrollVelocity effect with scroll interaction AND dock slide functionality
+        let scrollSpeed = 1;
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / scrollHeight;
+            
+            // Update scroll velocity
+            scrollSpeed = 1 + (scrollPercent * 2);
+            
+            const line1 = document.querySelector('.scroll-velocity-text.line-1');
+            const line2 = document.querySelector('.scroll-velocity-text.line-2');
+            
+            if (line1 && line2) {
+                line1.style.animationDuration = `${45 / scrollSpeed}s`;
+                line2.style.animationDuration = `${50 / scrollSpeed}s`;
             }
-
-            // Add keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                const sections = ['hero', 'about', 'projects', 'photography', 'contact'];
-                const currentSection = getCurrentSection();
-                const currentIndex = sections.indexOf(currentSection);
-
-                switch(e.key) {
-                    case 'ArrowDown':
-                    case ' ':
-                        e.preventDefault();
-                        if (currentIndex < sections.length - 1) {
-                            scrollToSection(sections[currentIndex + 1]);
-                        }
-                        break;
-                    case 'ArrowUp':
-                        e.preventDefault();
-                        if (currentIndex > 0) {
-                            scrollToSection(sections[currentIndex - 1]);
-                        }
-                        break;
-                    case 'Home':
-                        e.preventDefault();
-                        scrollToSection('hero');
-                        break;
-                    case 'End':
-                        e.preventDefault();
-                        scrollToSection('contact');
-                        break;
-                }
-            });
-
-            function getCurrentSection() {
-                const sections = document.querySelectorAll('section');
-                let currentSection = 'hero';
-                
-                sections.forEach(section => {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top <= 100 && rect.bottom >= 100) {
-                        currentSection = section.id;
-                    }
-                });
-                
-                return currentSection;
+            
+            // NEW: Dock slide down functionality when reaching end of page
+            const windowHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            const dock = document.getElementById('dock');
+            
+            if (!dock) return;
+            
+            // Check if near the bottom (within 100px of the end)
+            if (scrollTop + windowHeight >= docHeight - 100) {
+                // Slide dock down (hide with smooth transition)
+                dock.style.transform = 'translate(-50%, 100px)';
+                dock.style.opacity = '0.3';
+                dock.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            } else {
+                // Slide dock up (show)
+                dock.style.transform = 'translate(-50%, 0)';
+                dock.style.opacity = '1';
+                dock.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
             }
-
-            // Add focus management for accessibility
-            document.querySelectorAll('.dock-item').forEach(item => {
-                item.setAttribute('tabindex', '0');
-                item.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        item.click();
-                    }
-                });
-            });
-
-            // Add ARIA labels for better accessibility
-            document.querySelectorAll('.social-link').forEach((link, index) => {
-                const platforms = ['GitHub', 'LinkedIn', 'Email'];
-                link.setAttribute('aria-label', `Visit ${platforms[index]} profile`);
-            });
-
-            // Performance monitoring
-            if ('performance' in window) {
-                window.addEventListener('load', () => {
-                    setTimeout(() => {
-                        const perfData = performance.getEntriesByType('navigation')[0];
-                        console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-                    }, 0);
-                });
-            }
-
-            // Add preloader removal
-            setTimeout(() => {
-                const preloader = document.querySelector('.preloader');
-                if (preloader) {
-                    preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.display = 'none';
-                    }, 300);
-                }
-            }, 1000);
-
-            // Initialize all components
-            console.log('Portfolio website fully loaded and optimized!');
         });
     </script>
 </body>
