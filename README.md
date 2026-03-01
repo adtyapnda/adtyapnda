@@ -1,12 +1,105 @@
-# 💫 About Me:
-electronics kid, adtyapnda.in
+<h1 align="center">Hi there, I'm Aditya 👋</h1>
 
+<p align="center">
+Builder | AI Systems Explorer | LLM Security Researcher
+</p>
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/adtyapnda) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/adtyapnda) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:adtyapnda@gmail.com) 
+---
 
-# 💻 Tech Stack:
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+## 🧠 About Me
 
+I work at the intersection of **AI autonomy, system design, and real-world deployment**.
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+My focus is not just on making models respond —  
+but making systems **act, assist, and operate**.
+
+Currently exploring:
+
+- AI Agent Systems
+- Autonomous workflows
+- Prompt security & jailbreak resistance
+- Cloud-native ML deployment
+
+---
+
+## 🚀 What I'm Building
+
+| Project Area | Description | Status |
+|-------------|-------------|--------|
+| 🤖 AI Agents | Designing operator-style AI systems that interact with real environments | Active |
+| 🔐 LLM Security Research | Studying prompt injection & jailbreak patterns | Ongoing Research |
+| ☁️ Cloud AI Systems | Deploying intelligent workflows using AWS | In Progress |
+| 🧩 Automation Systems | Building digital execution pipelines | Active |
+
+---
+
+## 📚 Research Work
+
+| Focus Area | Goal |
+|-----------|------|
+| Prompt Hacking | Understanding model manipulation vectors |
+| Jailbreak Attacks | Mapping behavioral exploit surfaces |
+| Alignment Weakness | Observing response drift under pressure |
+| System Safety | Designing mitigation-aware workflows |
+
+---
+
+## 🛠️ Technical Toolbox
+
+| Category | Stack |
+|---------|------|
+| Languages | Python, JavaScript |
+| AI | LLMs, Prompt Engineering, Agent Frameworks |
+| Cloud | AWS |
+| Dev | GitHub, APIs, Automation Tools |
+| Systems Thinking | Workflow Architecture, Execution Design |
+
+---
+
+## 🧩 Current Interests
+
+- Human + AI collaboration
+- Action-oriented AI systems
+- Autonomous task execution
+- Cognitive interface design
+
+---
+
+## 📌 Work Style
+
+| Trait | Approach |
+|------|----------|
+| Builder Type | Solo |
+| Focus | Future-facing systems |
+| Thinking Style | Research-first |
+| Build Style | Automation-heavy |
+
+---
+
+## 🌱 Philosophy
+
+> AI shouldn't just generate output.  
+> It should generate outcomes.
+
+---
+
+## 📈 2026 Direction
+
+- Agent-based execution systems  
+- Secure LLM deployment  
+- AI-native tooling  
+- Real-world automation layers  
+
+---
+
+## 🤝 Open To
+
+- Collaborations
+- Experimental builds
+- AI system design discussions
+
+---
+
+<p align="center">
+Building things that feel slightly ahead of their time.
+</p>
