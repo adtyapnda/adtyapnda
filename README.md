@@ -43,16 +43,6 @@ My work sits across software, infrastructure, and intelligent automation.
 
 ---
 
-## 📌 Work Style
-
-| Trait | Approach |
-|------|----------|
-| Builder Type | Solo |
-| Focus | Practical intelligent systems |
-| Build Style | Implementation driven |
-
----
-
 <p align="center">
 Building things that solve real problems.
 </p>
