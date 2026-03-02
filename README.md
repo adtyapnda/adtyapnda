@@ -14,12 +14,12 @@ My work sits across software, infrastructure, and intelligent automation.
 
 ---
 
-## 🚀 Ongoing Projects
+## 🚀 Most Recent Projects
 
 | Project | Description | Status |
 |--------|-------------|--------|
 | 16-bit CPU (C) | Building a functional 16-bit CPU from scratch using C | In Progress |
-| Automobile Safety Infrastructure | Agentic AI based safety and R&D system for real-world use | In Progress |
+| Automobile Safety Infrastructure | Agentic AI based safety and R&D system for real-world use | Active |
 
 ---
 
