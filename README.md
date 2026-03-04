@@ -19,7 +19,7 @@ My work sits across software, infrastructure, and intelligent automation.
 | Project | Description | Status |
 |--------|-------------|--------|
 | 16-bit CPU (C) | Building a functional 16-bit CPU from scratch using C | In Progress |
-| Automobile Safety Infrastructure | Agentic AI based safety and R&D system for real-world use | Active |
+| VORP | A P2P file sharing platform | In Progress |
 
 ---
 
@@ -28,7 +28,7 @@ My work sits across software, infrastructure, and intelligent automation.
 | Project | Description |
 |--------|-------------|
 | LT Fault Detection Software | System for identifying and managing low tension electrical faults |
-| ClarityAI | Intelligent system focused on structured decision support |
+| Automobile Safety Infrastructure | Agentic AI based safety and R&D system for real-world use |
 
 ---
 
