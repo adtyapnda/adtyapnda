@@ -36,7 +36,7 @@ My work sits across software, infrastructure, and intelligent automation.
 
 | Category | Stack |
 |---------|------|
-| Languages | Python, C, JavaScript |
+| Languages | Python, C, Rust, Typescript |
 | Cloud | AWS |
 | Development | APIs, Automation Systems |
 | Interests | Systems Design, Infrastructure Tech |
