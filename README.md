@@ -27,7 +27,7 @@ My work sits across software, infrastructure, and intelligent automation.
 
 | Project | Description |
 |--------|-------------|
-| LT Fault Detection Software | System for identifying and managing low tension electrical faults |
+| Veil | Building a reusable scraper for many sites |
 | Automobile Safety Infrastructure | Agentic AI based safety and R&D system for real-world use |
 
 ---
